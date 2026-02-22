@@ -1,0 +1,37 @@
+/* Base mobile optimization */
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed; /* Prevent bouncy scrolling on iOS */
+  padding-top: var(--safe-area-inset-top);
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable areas should be explicitly defined */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Adjustments for Tailwind and Mobile */
+aside {
+  padding-bottom: calc(1rem + var(--safe-area-inset-bottom)) !important;
+}
+
+header {
+  padding-top: calc(0.5rem + var(--safe-area-inset-top)) !important;
+  height: auto !important;
+  min-height: 5rem;
+}

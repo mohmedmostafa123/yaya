@@ -1,0 +1,8 @@
+
+{
+  "name": "Communication Assistant (Arabic)",
+  "description": "A comprehensive assistant for deaf and mute individuals featuring real-time speech-to-text, text-to-speech, and employment assessment tools.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
